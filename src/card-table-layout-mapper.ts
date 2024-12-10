@@ -3,7 +3,6 @@
  */
 
 import { CardTableLayout } from "./card-table-layout.js";
-import { CardGameSettings } from "@brendangooch/card-game-settings";
 
 export abstract class CardTableLayoutMapper {
 
@@ -11,12 +10,11 @@ export abstract class CardTableLayoutMapper {
     protected numPlayers: number = 0;
     protected location: number = 0;
 
-    public constructor(layout: CardTableLayout) {
+    public constructor(layout: CardTableLayout, numPlayers: number) {
         this.layout = layout;
+        this.numPlayers = numPlayers;
     }
 
-    public abstract init(config: CardGameSettings): void;
-    public abstract load(json: string): void;
-    public abstract save(): string;
+
 
 }

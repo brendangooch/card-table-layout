@@ -4,17 +4,16 @@
  * 
  */
 
-import { CardTablePosition, CardTablePositionCollection } from "@brendangooch/card-table-position";
-import { CardTableLayoutStrategy } from "./card-table-layout-strategy.js";
+import { CardTablePosition, CardTablePositionCollection, CardTablePositionBuilder } from "@brendangooch/card-table-position";
 
-export class CardTableLayout {
+export abstract class CardTableLayout {
 
     protected positions: CardTablePositionCollection = new CardTablePositionCollection();
+    protected builder: CardTablePositionBuilder = new CardTablePositionBuilder();
     protected currentLocation: number = 0;
 
-    public setLayout(layout: CardTableLayoutStrategy): CardTableLayout {
-        layout.loadPositions(this.positions);
-        return this;
+    public constructor() {
+        this.loadPositions();
     }
 
     public location(location: number): CardTableLayout {
@@ -25,5 +24,11 @@ export class CardTableLayout {
     public index(index: number): CardTablePosition | null {
         return this.positions.find(this.currentLocation, index);
     }
+
+    protected addPosition(): void {
+        this.positions.add(this.builder.build());
+    }
+
+    protected abstract loadPositions(): void;
 
 }
