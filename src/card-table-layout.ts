@@ -12,8 +12,9 @@ export abstract class CardTableLayout {
     protected builder: CardTablePositionBuilder = new CardTablePositionBuilder();
     protected currentLocation: number = 0;
 
-    public constructor() {
+    public init(): CardTableLayout {
         this.loadPositions();
+        return this;
     }
 
     public location(location: number): CardTableLayout {

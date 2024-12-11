@@ -7,3 +7,8 @@ removed init() and persistence from CardTableLayoutMapper class; client can just
 
 v2.0.1
 imported latest CardTablePosition package (1.0.1) with slight bug fix
+
+v3.0.0
+removed constructor from CardTableLayout class and replaced with init()
+cannot easily call abstract methods in a parent constructor because "this" context gets incorrectly assigned
+solution is to call the abstract method in init() method on parent instead

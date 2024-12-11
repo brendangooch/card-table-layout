@@ -15,6 +15,4 @@ export abstract class CardTableLayoutMapper {
         this.numPlayers = numPlayers;
     }
 
-
-
 }
