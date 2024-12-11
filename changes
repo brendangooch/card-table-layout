@@ -4,3 +4,6 @@ v2.0.0
 removed CardTableLayoutStrategy class and placed it's functionality into CardTableLayout
 client now extends CardTableLayout to create a custom layout for each game
 removed init() and persistence from CardTableLayoutMapper class; client can just create a new Mapper on game init()
+
+v2.0.1
+imported latest CardTablePosition package (1.0.1) with slight bug fix

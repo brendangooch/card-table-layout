@@ -1,6 +1,6 @@
 {
     "name": "@brendangooch/card-table-layout",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "",
     "author": "B Gooch <brendangooch@gmail.com>",
     "license": "MIT",
@@ -38,6 +38,6 @@
     "keywords": [],
     "dependencies": {
         "@brendangooch/card-game-settings": "^1.1.0",
-        "@brendangooch/card-table-position": "^1.0.0"
+        "@brendangooch/card-table-position": "^1.0.1"
     }
 }
